@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0734D77E25B0A99400FCB8D3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0734D77D25B0A99400FCB8D3 /* main.cpp */; };
 		0734D78725B0AAC800FCB8D3 /* libtvision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0734D78625B0AAC800FCB8D3 /* libtvision.a */; };
+		79D5560925B4A9660044CA38 /* libncurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D5560825B4A9660044CA38 /* libncurses.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		0734D77A25B0A99400FCB8D3 /* tv_template_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tv_template_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		0734D77D25B0A99400FCB8D3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0734D78625B0AAC800FCB8D3 /* libtvision.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtvision.a; path = third/libtvision.a; sourceTree = "<group>"; };
+		79D5560825B4A9660044CA38 /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D5560925B4A9660044CA38 /* libncurses.tbd in Frameworks */,
 				0734D78725B0AAC800FCB8D3 /* libtvision.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +50,7 @@
 				0734D78625B0AAC800FCB8D3 /* libtvision.a */,
 				0734D77C25B0A99400FCB8D3 /* tv_template_test */,
 				0734D77B25B0A99400FCB8D3 /* Products */,
+				79D5560725B4A9660044CA38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 				0734D77D25B0A99400FCB8D3 /* main.cpp */,
 			);
 			path = tv_template_test;
+			sourceTree = "<group>";
+		};
+		79D5560725B4A9660044CA38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79D5560825B4A9660044CA38 /* libncurses.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,11 +268,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/third",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 					"$(SRCROOT)/third/libtvision.a",
-					/Users/omar/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/usr/lib/libncurses.tbd,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -282,11 +294,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/third",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
 					"$(SRCROOT)/third/libtvision.a",
-					/Users/omar/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk/usr/lib/libncurses.tbd,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
